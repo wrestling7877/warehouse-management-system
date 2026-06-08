@@ -15,12 +15,12 @@ public class AuthService {
 
     public LoginResponse login(LoginRequest request) {
 
-     //   authenticationManager.authenticate(
-       //         new UsernamePasswordAuthenticationToken(
-         //               request.getEmail(),
-           //             request.getPassword()
-             //   )
-       // );
+        authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(
+                        request.getEmail(),
+                        request.getPassword()
+                )
+        );
 
         return new LoginResponse("temporary-token");
     }
